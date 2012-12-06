@@ -39,11 +39,11 @@
           <!-- Links-->
           <div class="span3">
             <div class="well sidebar-nav affix" style="width:inherit">
-              <ul class="nav nav-list">
+              <ul class="nav nav-list" id="beacon_list">
                 <li class="nav-header">Sidebar</li>
                 <!--<li class="active"><a href="#">Link</a></li>-->
-                <li><a href="#beacon_initial_setup">Initial Setup</a></li>
-                <li><a href="#beacon_test_plan">Test Plan</a></li>
+                <li><a href="#beacon_initial_setup">Beacon Initial Setup</a></li>
+                <li><a href="#beacon_test_plan">Beacon Test Plan</a></li>
                 <!--
                 <li><a href="#">Link</a></li>
                 <li class="nav-header">Sidebar</li>
@@ -58,6 +58,11 @@
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li> -->
               </ul>
+              <ul class="nav nav-list" id="transponder_list" style="display:none">
+                <li class="nav-header">Sidebar</li>
+                <li><a href="#transponder_initial_setup">Transponder Initial Setup</a></li>
+                <li><a href="#transponder_test_plan">Transponder Test Plan</a></li>
+              </ul>
             </div><!--/.well -->
           </div><!--/Links-->
 
@@ -65,79 +70,170 @@
           <div class="span9">
             <!-- Heading-->
             <div class="hero-unit">
-              <h1 style="padding-bottom:20px">Test Plan</h1>
-              <p><a class="btn btn-primary btn-large">Learn more »</a></p>
+              <h1 style="padding-bottom:20px" id="page_heading">Beacon Test Plan</h1>
+              <p id="toggle_button"><a class="btn btn-primary btn-large"  onclick="toggleTestPlan()">Switch to transponder test plan »</a></p>
             </div><!-- Heading-->
 
-            <div class="row-fluid" id="beacon_initial_setup">
-              <div class="span9">
-                <h2>Initail Setup</h2>
+            <div id="beacon_container">
+
+              <div class="row-fluid" id="beacon_initial_setup">
+                <div class="span9">
+                  <h2>Initail Setup</h2>
+                </div>
               </div>
-            </div>
 
-            <!--Row-->
-            <div class="row-fluid">
-              <div class="span4">
-                <h3>Ground Data Collection Sites</h3>
-                <p>Ground stations are to be located in Seattle, WA, Columbus, OH and Atlanta, GA. These stations are proposed to have both the transmitter and receiver described in the hardware description so that they can also achieve the goals laid forth in Part 2. These locations were chosen for their differences in latitude, longitude and Rain Climate Zones within the Continental United States (CONUS.) Furthermore, atmospheric sensors for pressure, humidity, etc. are to be placed near the communication dishes at these locations and logged for correlation with communication link data. </p>
-                <p><a class="btn" href="#">View details »</a></p>
-              </div><!--/span-->
-              <div class="span4">
-                <h3>Clear Day Link Margin and Signal</h3>
-                <p>Frequencies of operation for the beacon transmitter on the satellite are to be tuned between 71GHz and 76GHz. As shown the Link Budget calculations at 71GHz and 76GHz, the system has a Clear-day CNR of 46.37dB and 45.77dB respectively; more than adequate for meeting the clear-day link margin minimum threshold proposed. By making the transmit and receive frequencies of the system tunable based on programming over the lower frequency communications link, the ability to characterize the Signal Attenuation, Phase Distortion and Depolarization at a multitude of frequencies is possible during one testing event.</p>
-                <p><a class="btn" href="#">View details »</a></p>
-              </div><!--/span-->             
-            </div><!--/Row-->
+              <!--Row-->
+              <div class="row-fluid">
+                <div class="span4">
+                  <h3>Ground Data Collection Sites</h3>
+                  <p>Ground stations are to be located in Seattle, WA, Columbus, OH and Atlanta, GA. These stations are proposed to have both the transmitter and receiver described in the hardware description so that they can also achieve the goals laid forth in Part 2. These locations were chosen for their differences in latitude, longitude and Rain Climate Zones within the Continental United States (CONUS.) Furthermore, atmospheric sensors for pressure, humidity, etc. are to be placed near the communication dishes at these locations and logged for correlation with communication link data. </p>
+                  <p><a class="btn" href="#">View details »</a></p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Clear Day Link Margin and Signal</h3>
+                  <p>Frequencies of operation for the beacon transmitter on the satellite are to be tuned between 71GHz and 76GHz. As shown the Link Budget calculations at 71GHz and 76GHz, the system has a Clear-day CNR of 46.37dB and 45.77dB respectively; more than adequate for meeting the clear-day link margin minimum threshold proposed. By making the transmit and receive frequencies of the system tunable based on programming over the lower frequency communications link, the ability to characterize the Signal Attenuation, Phase Distortion and Depolarization at a multitude of frequencies is possible during one testing event.</p>
+                  <p><a class="btn" href="#">View details »</a></p>
+                </div><!--/span-->             
+              </div><!--/Row-->
 
-            <!--Row-->
-            <div class="row-fluid">              
-              <div class="span4">
-                <h3>Transmit Power</h3>
-                <p>Effective Isotropic Radiated Power (EIRP) for all Link Budget Calculations was assumed to be 91.4dBm based on component selections. The final stage amplifier of the proposed transmitter design is a TWT with an output power of 40dBm combined with an antenna with a gain on of 51.4dBi leads to the EIRP used. </p>
-                <p><a class="btn" href="#">View details »</a></p>
-              </div><!--/span-->
-              <div class="span4">
-                <h3>Transmit/Receive Aperture</h3>
-                <p>The proposed antenna for both transmit and receive (mWave HRP2-800) has an aperture of 0.6 meters with a Half Power Beam width of 0.5 degrees that operates from 71 to 86 GHz with a gain of 51.4dBi.</p>
-                <p><a class="btn" href="#">View details »</a></p>
-              </div><!--/span-->
-            </div><!--/Row-->
+              <!--Row-->
+              <div class="row-fluid">              
+                <div class="span4">
+                  <h3>Transmit Power</h3>
+                  <p>Effective Isotropic Radiated Power (EIRP) for all Link Budget Calculations was assumed to be 91.4dBm based on component selections. The final stage amplifier of the proposed transmitter design is a TWT with an output power of 40dBm combined with an antenna with a gain on of 51.4dBi leads to the EIRP used. </p>
+                  <p><a class="btn" href="#">View details »</a></p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Transmit/Receive Aperture</h3>
+                  <p>The proposed antenna for both transmit and receive (mWave HRP2-800) has an aperture of 0.6 meters with a Half Power Beam width of 0.5 degrees that operates from 71 to 86 GHz with a gain of 51.4dBi.</p>
+                  <p><a class="btn" href="#">View details »</a></p>
+                </div><!--/span-->
+              </div><!--/Row-->
 
-            <hr>
+              <hr>
 
-            <div class="row-fluid" id="beacon_test_plan">
-              <div class="span9">
-                <h2>Test Plan</h2>
+              <div class="row-fluid" id="beacon_test_plan">
+                <div class="span9">
+                  <h2>Test Plan</h2>
+                </div>
               </div>
-            </div>
 
-            <div class="row-fluid">
-              <div class="span9">
-                <h3>Signal Attenuation</h3>
-                <p>Measurement of Signal Attenuation is to be characterized by comparing the signal amplitude received and logged by the DSP on the receiver at the ground station during a Clear-Day condition and comparing this value to the measurements taken with varying weather conditions at all locations. By doing this many times for both clear day and conditions and for the different weather conditions a table of attenuations can be generated.</p>
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Signal Attenuation</h3>
+                  <p>Measurement of Signal Attenuation is to be characterized by comparing the signal amplitude received and logged by the DSP on the receiver at the ground station during a Clear-Day condition and comparing this value to the measurements taken with varying weather conditions at all locations. By doing this many times for both clear day and conditions and for the different weather conditions a table of attenuations can be generated.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="row-fluid">
-              <div class="span9">
-                <h3>Phase Distortion</h3>
-                <p>Phase distortion measurements will be completed by monitoring the In Phase and Quadrature components of the signal going into the DSP block of the receiver and comparing them to those generated at the transmitter. Both of the software defined radio of the transmitter and the DSP block of the receiver are to be locked to GPS timing and time stamped. By doing so, the difference in phase and compensating for the phase difference created by the signal having travelled from the transmitter to the receiver, the phase distortion of the channel can be found. In order for this testing scheme to work, the full gain and phase behavior of both the transmitter and the receiver must be characterized for all frequencies tested.</p>
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Phase Distortion</h3>
+                  <p>Phase distortion measurements will be completed by monitoring the In Phase and Quadrature components of the signal going into the DSP block of the receiver and comparing them to those generated at the transmitter. Both of the software defined radio of the transmitter and the DSP block of the receiver are to be locked to GPS timing and time stamped. By doing so, the difference in phase and compensating for the phase difference created by the signal having travelled from the transmitter to the receiver, the phase distortion of the channel can be found. In order for this testing scheme to work, the full gain and phase behavior of both the transmitter and the receiver must be characterized for all frequencies tested.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="row-fluid">
-              <div class="span9">
-                <h3>Depolarization</h3>
-                <p>Measurement of depolarization is to be completed by taking advantage of the ground station receiver having two antennas; one polarized for vertical polarization while the other one is horizontal. By switching between the two antennas and monitoring the amplitude and phase of the signal received for both states, it is proposed that the amount of depolarization of the original vertically polarized signal can be found. This process is to be completed for Clear-day conditions to calculate a baseline depolarization and then repeated for various weather conditions.</p>
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Depolarization</h3>
+                  <p>Measurement of depolarization is to be completed by taking advantage of the ground station receiver having two antennas; one polarized for vertical polarization while the other one is horizontal. By switching between the two antennas and monitoring the amplitude and phase of the signal received for both states, it is proposed that the amount of depolarization of the original vertically polarized signal can be found. This process is to be completed for Clear-day conditions to calculate a baseline depolarization and then repeated for various weather conditions.</p>
+                </div>
               </div>
-            </div>
 
-            <div class="row-fluid">
-              <div class="span9">
-                <h3>Testing</h3>
-                <p>As many of the procedures to test these characteristics can be done simultaneously, a rigorous Design of Experiments (DoE) analysis will be completed to define the minimum number of tests that can be completed that will fully characterize the atmospheric effects of a wide range of weather conditions on the link. Tests will be repeated will similar weather, polarization, and signal level as necessary to rigorously test the validity of data.  This data proposed to then by used in modeling software created to predict results of future testing; the results of this software simulation is to be compared with the aforementioned test results for accuracy.</p>
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Testing</h3>
+                  <p>As many of the procedures to test these characteristics can be done simultaneously, a rigorous Design of Experiments (DoE) analysis will be completed to define the minimum number of tests that can be completed that will fully characterize the atmospheric effects of a wide range of weather conditions on the link. Tests will be repeated will similar weather, polarization, and signal level as necessary to rigorously test the validity of data.  This data proposed to then by used in modeling software created to predict results of future testing; the results of this software simulation is to be compared with the aforementioned test results for accuracy.</p>
+                </div>
               </div>
-            </div>
+            </div> <!--Beacon Container-->
+
+            <div id="transponder_container" style="display:none">
+
+              <div class="row-fluid" id="transponder_initial_setup">
+                <div class="span9">
+                  <h2>Initail Setup</h2>
+                </div>
+              </div>
+
+              <!--Row-->
+              <div class="row-fluid">
+                <div class="span4">
+                  <h3>Signal Bandwidth/ Data Rate</h3>
+                  <p>The proposed initial modulation scheme of the communications link to be implemented is Binary Phase Shift Keying (BPSK). Using BPSK with a Bit Error Rate (BER) of 0.0001 the clear day link margins for various Data Rates were calculated; these can be seen in detail in the Link Budget section. The maximum calculated theoretical bit rate with BPSK and the chosen BER for a Clear-day link is 164 Mb/s, as the System Link Margin (SML) of all frequencies in both uplink and downlink is greater than 0dB. The next larger calculated value of 328 Mb/s would not have a positive SML for all values of downlink frequencies, and would have a negative link margin for all uplink frequencies. With this in mind, the maximum capacity of this proposed system has been found for clear day situations. Knowing this, testing will occur at various lower Data Rates where the link margin for Clear-day operations is much higher, thus allowing for reception of data even with atmospheric losses. </p>
+                </div><!--/span--> 
+                <div class="span4">
+                  <h3>Ground Data Collection Sites</h3>
+                  <p>Ground stations are to be located in Seattle, WA, Columbus, OH and Atlanta, GA. These stations are proposed to have both the transmitter and receiver described in the hardware description. These locations were chosen for their differences in latitude, longitude and Rain Climate Zones within the Continental United States (CONUS.) Furthermore, atmospheric sensors for pressure, humidity, etc. are to be placed near the communication dishes at these locations and logged for correlation with communication link data. </p>
+                </div><!--/span-->           
+              </div><!--/Row-->
+
+               <!--Row-->
+              <div class="row-fluid">              
+                <div class="span4">
+                  <h3>Clear Day Link Margin</h3>
+                  <p>As discussed in the Link Budget section, the Clear-day System Link Margin for communication in the system varies with both Bit Rate and Frequency of operation. From this section, it can be seen that for 19.2kb/s that the link margin on a clear day ranges from 42.42dBm at 71GHz to 40.76dBm at 86GHz.</p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Number of Carrier Frequencies</h3>
+                  <p>The proposed system has a potentially infinite number of non-simultaneous carrier frequencies. By allowing the local oscillators in both the transmitter and receiver to be tunable based on proposed test frequencies, the carrier frequency of the system can be placed at the frequency of interest for the test.</p>
+                </div><!--/span-->
+              </div><!--/Row-->
+
+              <!--Row-->
+              <div class="row-fluid">              
+                <div class="span4">
+                  <h3>Transmit Power</h3>
+                  <p>Effective Isotropic Radiated Power (EIRP) for all Link Budget Calculations was assumed to be 91.4dBm based on component selections. The final stage amplifier of the proposed transmitter design is a TWT with an output power of 40dBm combined with an antenna with a gain on of 51.4dBi leads to the EIRP used. </p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Transmit/Receive Aperture</h3>
+                  <p>The proposed antenna for both transmit and receive (mWave HRP2-800) has an aperture of 0.6 meters with a Half Power Beam width of 0.5 degrees that operates from 71 to 86 GHz with a gain of 51.4dBi.</p>
+                </div><!--/span-->
+              </div><!--/Row-->
+
+              <hr>
+
+              <div class="row-fluid" id="transponder_test_plan">
+                <div class="span9">
+                  <h2>Test Plan</h2>
+                </div>
+              </div>
+
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Modulation Schemes/Coding</h3>
+                  <p>Initial proposed modulation scheme is Binary Phase Shift Keying (BPSK) with a variable data rate based on the testing required. It is proposed that as more characterization of the atmosphere is completed, or if it is found during development that more complexity is needed, that other modulation schemes and coding is to be added to the system.</p>
+                </div>
+              </div>
+
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Bit Error Rate</h3>
+                  <p> Bit Error Rate (BER) is to be characterized at various data rates, frequencies and atmospheric conditions. The BER assumed in all link budget calculations for this proposal is 0.0001; an ideal goal for communications. Characterizing the BER of the system for BPSK will be completed by sending identical messages to the DSP of the receiver, either on the satellite or the base station, on both the channel under test and on the auxiliary channel for command and control mentioned in the BAA. These received messages will then be compared bit by bit for errors, which will be reported to the tester.</p>
+                </div>
+              </div>
+
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Link Margin</h3>
+                  <p>Link Margin is to be measured by varying the amplitude output of the transmitter at various data rates, frequencies, and atmospheric conditions until the BER measured by the system becomes unacceptable to the tester. By doing so, the difference between maximum output power and the output of the transmitter at the point of crossover into bad BERs, will be used as the link margin. </p>
+                </div>
+              </div>
+
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Availability</h3>
+                  <p>It is proposed that availability tables are to be constructed, for various data rates and a defined maximum BER, of frequency versus percentage of time available. This is to be completed by tests that span various whether conditions at each location. By logging the amount of time that the BER of the link is higher than that desired for availability (0.001 has been the baseline for this proposal), and comparing that to the length of the test, the availability percentage can be found. </p>
+                </div>
+              </div>
+
+              <div class="row-fluid">
+                <div class="span9">
+                  <h3>Testing</h3>
+                  <p>As many of the procedures to test these characteristics can be done simultaneously, a rigorous Design of Experiments (DoE) analysis will be completed to define the minimum number of tests that can be completed that will fully characterize the atmospheric effects of a wide range of weather conditions on the link.  This data proposed to then by used in modeling software created to predict results of future testing; the results of this software simulation is to be compared with the aforementioned test results for accuracy.</p>
+                </div>
+              </div>
+            </div> <!--Transponder Container-->
 
             <hr>
 
@@ -164,5 +260,6 @@
       <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="testPlan.js"></script>
   </body>
 </html>
