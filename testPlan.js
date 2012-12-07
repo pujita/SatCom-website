@@ -8,7 +8,7 @@ function toggleTestPlan(){
 	if(beaconContainer.style.display == "" || beaconContainer.style.display == "block" ) {
 		beaconContainer.style.display = "none";
 		transponderContainer.style.display = "block";
-		toggleButton.childNodes[0].innerHTML = "Switch to beacon test plan »";
+		toggleButton.childNodes[0].innerHTML = "Switch to beacon test plan";
 		beaconList.style.display = "none";
 		transponderList.style.display = "block";
 		document.getElementById("page_heading").innerHTML = "Transponder Test Plan";
@@ -16,7 +16,7 @@ function toggleTestPlan(){
 	} else {
 		beaconContainer.style.display = "block";
 		transponderContainer.style.display = "none";
-		toggleButton.childNodes[0].innerHTML = "Switch to transponder test plan »";
+		toggleButton.childNodes[0].innerHTML = "Switch to transponder test plan";
 		beaconList.style.display = "block";
 		transponderList.style.display = "none";
 		document.getElementById("page_heading").innerHTML = "Beacon Test Plan";

@@ -29,7 +29,7 @@
                 <li><a href="./hardware.html">Hardware</a></li>
                 <li><a href="./testPlan.html">Test Plan</a></li>
                 <li><a href="./literature.html">Literature</a></li>
-                <li><a href="./contactUs.html">Contact Us</a></li>
+                <li><a href="./businessPlan.html">Business Plan</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -43,9 +43,11 @@
           <div class="span3">
             <div class="well sidebar-nav affix" style="width:inherit">
               <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
+                <li class="nav-header">Requirements</li>
                 <li><a href="#beacon">Beacon Experiment Design Criteria</a></li>
-                  <li><a href="#transponder">Transponder Experiment Design Criteria</a></li>
+                <li><a href="#beacon_design">Beacon Experiment System Design</a></li>
+                <li><a href="#transponder">Transponder Experiment Design Criteria</a></li>
+                <li><a href="#transponder_design">Transponder Experiment System Design</a></li>
               </ul>
             </div><!--/.well -->
           </div><!--/Links-->
@@ -54,39 +56,94 @@
           <div class="span9">
             <!-- Heading-->
             <div class="hero-unit">
-              <h1 style="padding-bottom:20px">BAA Requirements</h1>
+              <h1 style="padding-bottom:20px">Requirements</h1>
             </div><!-- Heading-->    
 
             <div class="row-fluid" id="beacon">
               <div class="span9">
                 <h2>Beacon Experiment Design Criteria</h2>
+                <center><img src="./images/BeaconRequirements.png" style="padding-top:20px;padding-bottom:20px;"></img></center>
               </div>
             </div>      
 
-            <div class="row-fluid">
+            <div class="row-fluid" id="beacon_design">
               <div class="span9">
-                <img src="./images/BeaconRequirements.png" style="padding-top:20px;padding-bottom:20px;"></img>
+                <h2>Beacon Experiment System Design</h2>
+
               </div>
-            </div>
+            </div> 
+
+             <div class="row-fluid">
+                <div class="span4">
+                  <h3>Ground Data Collection Sites</h3>
+                  <p>Ground stations are to be located in Seattle, WA, Columbus, OH and Atlanta, GA. These stations are proposed to have both the transmitter and receiver described in the hardware description so that they can also achieve the goals laid forth in Part 2. These locations were chosen for their differences in latitude, longitude and Rain Climate Zones within the Continental United States (CONUS.) Furthermore, atmospheric sensors for pressure, humidity, etc. are to be placed near the communication dishes at these locations and logged for correlation with communication link data. </p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Clear Day Link Margin and Signal</h3>
+                  <p>Frequencies of operation for the beacon transmitter on the satellite are to be tuned between 71GHz and 76GHz. As shown the Link Budget calculations at 71GHz and 76GHz, the system has a Clear-day CNR of 46.37dB and 45.77dB respectively; more than adequate for meeting the clear-day link margin minimum threshold proposed. By making the transmit and receive frequencies of the system tunable based on programming over the lower frequency communications link, the ability to characterize the Signal Attenuation, Phase Distortion and Depolarization at a multitude of frequencies is possible during one testing event.</p>
+                </div><!--/span-->             
+              </div><!--/Row-->
+
+              <!--Row-->
+              <div class="row-fluid">              
+                <div class="span4">
+                  <h3>Transmit Power</h3>
+                  <p>Effective Isotropic Radiated Power (EIRP) for all Link Budget Calculations was assumed to be 91.4dBm based on component selections. The final stage amplifier of the proposed transmitter design is a TWT with an output power of 40dBm combined with an antenna with a gain on of 51.4dBi leads to the EIRP used. </p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Transmit/Receive Aperture</h3>
+                  <p>The proposed antenna for both transmit and receive (mWave HRP2-800) has an aperture of 0.6 meters with a Half Power Beam width of 0.5 degrees that operates from 71 to 86 GHz with a gain of 51.4dBi.</p>
+                </div><!--/span-->
+              </div><!--/Row-->
+
 
             <div class="row-fluid" id="transponder">
               <div class="span9">
                 <h2>Transponder Experiment Design Criteria</h2>
+                <center><img src="./images/TransponderRequirements.png" style="padding-top:20px;padding-bottom:20px;"></img></center>
               </div>
-            </div>      
+            </div> 
 
-            <div class="row-fluid">
+            <div class="row-fluid" id="transponder_design">
               <div class="span9">
-                <img src="./images/TransponderRequirements.png" style="padding-top:20px;padding-bottom:20px;"></img>
+                <h2>Transponder Experiment System Design</h2>
               </div>
-            </div>
+            </div> 
 
-            <!--Row-->
-            <div class="row-fluid">
-              <div class="span9">
-                <p>Additional information/ requirements</p>
+             <div class="row-fluid">
+                <div class="span4">
+                  <h3>Signal Bandwidth/ Data Rate</h3>
+                  <p>The proposed initial modulation scheme of the communications link to be implemented is Binary Phase Shift Keying (BPSK). Using BPSK with a Bit Error Rate (BER) of 0.0001 the clear day link margins for various Data Rates were calculated; these can be seen in detail in the Link Budget section. The maximum calculated theoretical bit rate with BPSK and the chosen BER for a Clear-day link is 164 Mb/s, as the System Link Margin (SML) of all frequencies in both uplink and downlink is greater than 0dB. The next larger calculated value of 328 Mb/s would not have a positive SML for all values of downlink frequencies, and would have a negative link margin for all uplink frequencies. With this in mind, the maximum capacity of this proposed system has been found for clear day situations. Knowing this, testing will occur at various lower Data Rates where the link margin for Clear-day operations is much higher, thus allowing for reception of data even with atmospheric losses. </p>
+                </div><!--/span--> 
+                <div class="span4">
+                  <h3>Ground Data Collection Sites</h3>
+                  <p>Ground stations are to be located in Seattle, WA, Columbus, OH and Atlanta, GA. These stations are proposed to have both the transmitter and receiver described in the hardware description. These locations were chosen for their differences in latitude, longitude and Rain Climate Zones within the Continental United States (CONUS.) Furthermore, atmospheric sensors for pressure, humidity, etc. are to be placed near the communication dishes at these locations and logged for correlation with communication link data. </p>
+                </div><!--/span-->           
               </div><!--/Row-->
-            </div><!--/span-->
+
+               <!--Row-->
+              <div class="row-fluid">              
+                <div class="span4">
+                  <h3>Clear Day Link Margin</h3>
+                  <p>As discussed in the Link Budget section, the Clear-day System Link Margin for communication in the system varies with both Bit Rate and Frequency of operation. From this section, it can be seen that for 19.2kb/s that the link margin on a clear day ranges from 42.42dBm at 71GHz to 40.76dBm at 86GHz.</p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Number of Carrier Frequencies</h3>
+                  <p>The proposed system has a potentially infinite number of non-simultaneous carrier frequencies. By allowing the local oscillators in both the transmitter and receiver to be tunable based on proposed test frequencies, the carrier frequency of the system can be placed at the frequency of interest for the test.</p>
+                </div><!--/span-->
+              </div><!--/Row-->
+
+              <!--Row-->
+              <div class="row-fluid">              
+                <div class="span4">
+                  <h3>Transmit Power</h3>
+                  <p>Effective Isotropic Radiated Power (EIRP) for all Link Budget Calculations was assumed to be 91.4dBm based on component selections. The final stage amplifier of the proposed transmitter design is a TWT with an output power of 40dBm combined with an antenna with a gain on of 51.4dBi leads to the EIRP used. </p>
+                </div><!--/span-->
+                <div class="span4">
+                  <h3>Transmit/Receive Aperture</h3>
+                  <p>The proposed antenna for both transmit and receive (mWave HRP2-800) has an aperture of 0.6 meters with a Half Power Beam width of 0.5 degrees that operates from 71 to 86 GHz with a gain of 51.4dBi.</p>
+                </div><!--/span-->
+              </div><!--/Row-->      
 
             <hr>
 
