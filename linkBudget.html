@@ -28,8 +28,8 @@
                 <li><a href="./atmosphericAttenuation.html">Atmospheric Attenuation</a></li>
                 <li><a href="./hardware.html">Hardware</a></li>
                 <li><a href="./testPlan.html">Test Plan</a></li>
-                <li><a href="./literature.html">Literature</a></li>
                 <li><a href="./businessPlan.html">Business Plan</a></li>
+                <li><a href="./literature.html">Refrences</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -86,9 +86,9 @@
             <div class="row-fluid" id="calculation">
               <div class="span9">
                 <h2>Link Budget Calculation</h2>
-                <p>Link budget calculations for the proposed system were completed following the general template used by Lucente et al in (REFERENCE!) with simplifications implemented by assuming gain defined by selected antenna to be constant over the bands of operation and antenna pointing to be ideal.</p>
+                <p>Link budget calculations for the proposed system were completed following the general template used by <a href="./refrences/Terrestrial_Paper.pdf">Lucente et</a> with simplifications implemented by assuming gain defined by selected antenna to be constant over the bands of operation and antenna pointing to be ideal.</p>
                 <p>Based on the use of a Travelling Wave Tube (TWT) transmit amplifier proposed, combined with the antenna chosen, an Effective Isotropic Radiated Power (EIRP) near 61.4 dBW is expected.</p>
-                <p>The transmit and receive channel Free Space Loss was estimated from 71-76GHz and 81-86GHz with a distance between the earth station and antenna calculated based on geostationary orbit. In addition to Free Space Loss, the Link Budget used in this proposal includes an estimated Rain Loss Factor (RLF) based on results based on the ITU recommendation (REFERENCE.) These RLFs were calculated for the ground stations located in Seattle, WA, Columbus, OH, and Atlanta, GA for an outage probability of 0.1%; locations selected for both latitude and Rain Fall Zone differences. Using these RLFs in conjunction with the calculated Free Space Loss calculations, an estimate of the transmit and receive channel loss for the duration of the testing of this proposed satellite was used in order to predict link margins for different tests.</p>
+                <p>The transmit and receive channel Free Space Loss was estimated from 71-76GHz and 81-86GHz with a distance between the earth station and antenna calculated based on geostationary orbit. In addition to Free Space Loss, the Link Budget used in this proposal includes an estimated Rain Loss Factor (RLF) based on results based on the ITU recommendation. These RLFs were calculated for the ground stations located in Seattle, WA, Columbus, OH, and Atlanta, GA for an outage probability of 0.1%; locations selected for both latitude and Rain Fall Zone differences. Using these RLFs in conjunction with the calculated Free Space Loss calculations, an estimate of the transmit and receive channel loss for the duration of the testing of this proposed satellite was used in order to predict link margins for different tests.</p>
                 <p>Furthermore, once the Gain to Noise Temperature Ration (GT Ratio) was calculated based on chose antenna and Low Noise Amplifier (LNA), the Carrier to Noise Ratio (CNR) was estimated for a wide range of Bit Rates on an uncoded BPSK system. Finally, the System Link Margin (SLM) was calculated based on a Bit Error Rate (BER) of 0.0001.</p>
                 <p>Finally, using the information described above, summary tables were generated for each ground station location, for 0.1% outage probability, a max BER of 0.0001 at various Bit Rates were generated. A final table of SLMs for a clear day situation was generated to show that for all proposed frequencies and data rates, the SLM is sufficient for communications.</p>
                 <center><img src="./images/Result.png"></center>
@@ -96,7 +96,7 @@
 
                 <div class="row-fluid">
                   <div class="span9">
-                    <p>Select the operating frequency, location and data rate from below to calculate the Sytem Link Margin!</p>
+                    <p>Select the operating frequency, location and data rate from below to calculate the Sytem Link Margin and determine at what datarates, the link breaks!</p>
                     <h5>Frequency:</h5>
                     <input type="range" name="points" min="1" max="4" id="freq" onchange="calculate()" style="width:inherit">
                     <div><span style="padding-right:75px">71 GHz</span> <span style="padding-right:75px">76 GHz</span> <span style="padding-right:75px">81 GHz</span> <span style="padding-right:75px">86 GHz</span></div>

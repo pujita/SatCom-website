@@ -28,8 +28,8 @@
                 <li class="active"><a href="#">Atmospheric Attenuation</a></li>
                 <li><a href="./hardware.html">Hardware</a></li>
                 <li><a href="./testPlan.html">Test Plan</a></li>
-                <li><a href="./literature.html">Literature</a></li>
                 <li><a href="./businessPlan.html">Business Plan</a></li>
+                <li><a href="./literature.html">Refrences</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -62,16 +62,16 @@
      
             <div class="row-fluid">
               <div class="span9">
-                <p>Some issues related to W/V-band propagation are primarily due to the effects of the Earth’s atmosphere and their impact on system availability and margin. Distortions due to multipath propagation do not affect the millimeter wave. However, some atmospheric effects at the millimeter wavelengths are gaseous absorption, cloud attenuation, rain attenuation, and tropospheric scintillation. Gaseous absorptions are mainly due to atmospheric gaseous components (predominantly oxygen and water vapor) and typically have a small contribution to the total path attenuation in the W/V band [2]. Cloud attenuation at the W/V bands can contribute to significant loss (> 10 dB) [3]. Rain attenuation has the most dominant contribution to the total propagation loss when dealing with higher frequencies [4]. Troposphere scintillation is the rapid fluctuations in the refractive index of owing to turbulence and produces random fades and enhancements of the received signal amplitude [7]. This phenomenon can seriously affect satellite-earth links at frequencies above 10 GHz and at very low elevation angles (<=5 degrees). </p>
+                <p>Some issues related to W/V-band propagation are primarily due to the effects of the Earth’s atmosphere and their impact on system availability and margin. Distortions due to multipath propagation do not affect the millimeter wave. However, some atmospheric effects at the millimeter wavelengths are gaseous absorption, cloud attenuation, rain attenuation, and tropospheric scintillation. Gaseous absorptions are mainly due to atmospheric gaseous components (predominantly oxygen and water vapor) and typically have a small contribution to the total path attenuation in the W/V band <a href="./refrences/1082ch6.pdf">[2]</a>. Cloud attenuation at the W/V bands can contribute to significant loss (> 10 dB) <a href="./refrences/1082ch6.pdf">[3]</a>. Rain attenuation has the most dominant contribution to the total propagation loss when dealing with higher frequencies <a href="./refrences/refrence4.pdf">[4]</a>. Troposphere scintillation is the rapid fluctuations in the refractive index of owing to turbulence and produces random fades and enhancements of the received signal amplitude <a href="http://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.618-10-200910-I!!PDF-E.pdf">[7]</a>. This phenomenon can seriously affect satellite-earth links at frequencies above 10 GHz and at very low elevation angles (<=5 degrees). </p>
               </div><!--/Row-->
             </div><!--/span-->
 
             <div class="row-fluid" id="rain_attenuation">
               <div class="span9">
                 <h2>Rain Attenuation</h2>
-                <p>Rain attenuation is the most significant propagation impairment for satellite communication systems operating in the W/V band frequencies [4]. The rain path attenuation is given by the following equation</p>
+                <p>Rain attenuation is the most significant propagation impairment for satellite communication systems operating in the W/V band frequencies <a href="./refrences/refrence4.pdf">[4]</a>. The rain path attenuation is given by the following equation</p>
                 <img src="./images/RainAttEq.png" />
-                <p>The rainfall rate intensity, and the estimated frequency dependent coefficients k and ∝ for 71-76 GHz and 81-86 GHz can be obtained from Table 1 [6].</p>
+                <p>The rainfall rate intensity, and the estimated frequency dependent coefficients k and ∝ for 71-76 GHz and 81-86 GHz can be obtained from <a href="./refrences/SpecificAttenuationModel.pdf">Table 1</a>.</p>
                 <center><img src="./images/RainAttCoef.png" /></center>
                 <p>The chosen Satellite is present at 100.8&ordm;W. The look angles for all the three locations are calculated and the worst case (horizontal polarization) rain attenuation estimates of these three locations are shown below.</p>
                 <center><img src="./images/RainAtt.png" /></center>
@@ -83,14 +83,14 @@
               <div class="span9">
                 <h2>Gaseous Attenuation</h2>
                 <center><img src="./images/GaseousAttenuation.png" style="padding-top:20px;padding-bottom:20px;" /></center>
-                <p>Attenuation by gases for W/V bands is primarily caused by oxygen and water vapor. A method for predicting absorption due to atmospheric gases is given in [2]. Figure 1 shows the effect of oxygen and water vapor to wave propagation in different frequencies. The resonance of water absorption occurs at approximately 22 and 183 GHz, and absorption resonances for oxygen occurs at 60 and 120 GHz. Minimum attenuation occurs between these frequencies. To calculate the gaseous attenuation, the parameters are needed are elevation angle, operating frequency, altitude above sea level, and water vapor density, and the attenuation equation can be found in [2].</p>
+                <p>Attenuation by gases for W/V bands is primarily caused by oxygen and water vapor. A method for predicting absorption due to atmospheric gases is given in <a href="./refrences/1082ch6.pdf">[2]</a>. Figure 1 shows the effect of oxygen and water vapor to wave propagation in different frequencies. The resonance of water absorption occurs at approximately 22 and 183 GHz, and absorption resonances for oxygen occurs at 60 and 120 GHz. Minimum attenuation occurs between these frequencies. To calculate the gaseous attenuation, the parameters are needed are elevation angle, operating frequency, altitude above sea level, and water vapor density, and the attenuation equation can be found in <a href="./refrences/1082ch6.pdf">[2]</a>.</p>
               </div>
             </div>
 
             <div class="row-fluid" id="cloud_attenuation">
               <div class="span9">
                 <h2>Cloud Attenuation</h2>
-                 <p>Cloud attenuation becomes increasingly important to consider for reliable satellite communications at frequencies above 10 GHz [1]. For clouds or fog consist of small droplets, less than 0.01 cm, the Rayleigh approximation is valid for frequencies below 200 GHz and it is possible to express the attenuation in terms of the total water content per unit volume [3]. The following equation can be used to obtain the attenuation due to clouds for a given probability:</p>
+                 <p>Cloud attenuation becomes increasingly important to consider for reliable satellite communications at frequencies above 10 GHz <a href="./refrences/refrence1.pdf">[1]</a>. For clouds or fog consist of small droplets, less than 0.01 cm, the Rayleigh approximation is valid for frequencies below 200 GHz and it is possible to express the attenuation in terms of the total water content per unit volume <a href="./refrences/1082ch6.pdf">[3]</a>. The following equation can be used to obtain the attenuation due to clouds for a given probability:</p>
                  <img src="./images/CloudAttenuationEq.png" style="padding-top:20px;padding-bottom:20px;"></img>
                  <p>where L is the total columnar content of liquid water (kg/m^2), Kl is the specific attenuation by water droplet (can be obtained in Fig. 2), and &theta; is the elevation angle.</p>
                  <center><img src="./images/CloudAttenuation.png" style="padding-top:20px;padding-bottom:20px;" /></center>
@@ -100,7 +100,7 @@
             <div class="row-fluid" id="ionospheric_attenuation">
               <div class="span9">
                 <h2>Ionospheric and Tropospheric Scintillation</h2>
-                 <p>Variations in the magnitude and the profile of the refractive index of the troposphere lead to amplitude fluctuations known as scintillations [5]. The magnitude of scintillation is affected by increase in frequency, decrease in elevation angle, and decrease in antenna beamwidth. Tropospheric scintillation can cause serious degradation in performance at low elevation angles (≤10o) and at frequencies above 10 GHz. Ionoshperic scintillation may be important at frequencies below about 6 GHz [7]. The scintillation fade depth for the time percentage p can be calculated by:</p>
+                 <p>Variations in the magnitude and the profile of the refractive index of the troposphere lead to amplitude fluctuations known as scintillations <a href="./refrences/refrence5.pdf">[5]</a>. The magnitude of scintillation is affected by increase in frequency, decrease in elevation angle, and decrease in antenna beamwidth. Tropospheric scintillation can cause serious degradation in performance at low elevation angles (≤10o) and at frequencies above 10 GHz. Ionoshperic scintillation may be important at frequencies below about 6 GHz <a href="http://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.618-10-200910-I!!PDF-E.pdf">[7]</a>. The scintillation fade depth for the time percentage p can be calculated by:</p>
                  <center><img src="./images/IonosphereAtt.png" style="padding-top:20px;padding-bottom:20px;"/></center>
               </div>
             </div> 
@@ -108,7 +108,7 @@
             <div class="row-fluid" id="total_attenuation">
               <div class="span9">
                 <h2>Total Propagation Attenuation Estimation</h2>
-                 <p>It is possible to obtain attenuation predictions according to predictive models based on ESA climatologic data banks and ITU recommendations. According to [7], the free-space path attenuations can be summed to atmospheric additional attenuation, AT¬, to obtain total link path loss:</p>
+                 <p>It is possible to obtain attenuation predictions according to predictive models based on ESA climatologic data banks and ITU recommendations. According to <a href="http://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.618-10-200910-I!!PDF-E.pdf">[7]</a>, the free-space path attenuations can be summed to atmospheric additional attenuation, AT¬, to obtain total link path loss:</p>
                  <center><img src="./images/TotalAtmosphericAtt.png" style="padding-top:20px;padding-bottom:20px;"/></center>
               </div>
             </div>      
