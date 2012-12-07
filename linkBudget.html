@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <!-- Navigation Bar-->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="brand" href="./home.html">Geo Sat Tech</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./requirements.html">Requirements</a></li>
+                <li><a href="./groundLocation.html">Ground Location</a></li>
+                <li class="active"><a href="#">Link Budget</a></li>
+                <li><a href="./atmosphericAttenuation.html">Atmospheric Attenuation</a></li>
+                <li><a href="./hardware.html">Hardware</a></li>
+                <li><a href="./testPlan.html">Test Plan</a></li>
+                <li><a href="./literature.html">Literature</a></li>
+                <li><a href="./contactUs.html">Contact Us</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div><!-- Navigation Bar-->
+
+      <!-- Main Container-->
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <!-- Links-->
+          <div class="span3">
+            <div class="well sidebar-nav affix" style="width:inherit">
+              <ul class="nav nav-list">
+                <li class="nav-header">Sidebar</li>
+                  <li><a href="#friis">Friis Transmission Equation</a></li>
+                  <li><a href="#rain">Rain Attenuation</a></li>
+                  <li><a href="#friis">Friis Transmission Equation</a></li>
+              </ul>
+            </div><!--/.well -->
+          </div><!--/Links-->
+
+          <!-- Content-->
+          <div class="span9">
+            <!-- Heading-->
+            <div class="hero-unit">
+              <h1 style="padding-bottom:20px">Link Budget</h1>
+            </div><!-- Heading-->    
+
+            <div class="row-fluid" id="atmospheric_attenuation">
+              <div class="span9">
+                <h2>Friis transmission equation</h2>
+              </div>
+            </div>      
+
+            <div class="row-fluid" id="friis">
+              <div class="span9">
+                <p>The Friis transmission equation is used in telecommunications engineering, and gives the power received by one antenna under idealized conditions given another antenna some distance away transmitting a known amount of power. The formula used to estimate the link budget is as follows</p>
+                <img src="./images/FriisEq.png" style="padding-top:20px;padding-bottom:20px;"></img>
+                <p>- Where, Pr is the power received by the reciever.</p>
+                <p>- Pt is the power transmitted by the transmitter.</p>
+                <p>- Gr and Gt are the gaines of the Receiver and the transmitter respectively. Since we have used the same <a href="google.com">antenna</a> for the transmitter and the receiver, Gr = Gt = 51.4 dB.</p>
+                <p>- <a href="./atmosphericAttenuation.html">Atmospheric attenuation</a> is estimated to around 2.6 dB.</p>
+                <p>- Rain Attenuation is calculated individually for all of the three locations as shown in the section below</p>
+              </div><!--/Row-->
+            </div><!--/span-->
+
+            <div class="row-fluid" id="cloud_attenuation">
+              <div class="span9">
+                <h2>Cloud Attenuation</h2>
+              </div>
+            </div> 
+
+                 
+
+            <div class="row-fluid">
+              <div class="span9">
+                <p>Attenuation by gases for W/V bands is primarily caused by oxygen and water vapor. A method for predicting absorption due to atmospheric gases is given in [2]. Figure 1 shows the effect of oxygen and water vapor to wave propagation in different frequencies. The resonance of water absorption occurs at approximately 22 and 183 GHz, and absorption resonances for oxygen occurs at 60 and 120 GHz. Minimum attenuation occurs between these frequencies. To calculate the gaseous attenuation, the parameters are needed are elevation angle, operating frequency, altitude above sea level, and water vapor density, and the attenuation equation can be found in [2].</p>
+              </div><!--/Row-->
+            </div><!--/span-->
+
+            <div class="row-fluid" id="cloud_attenuation">
+              <div class="span9">
+                <h2>Cloud Attenuation</h2>
+              </div>
+            </div>      
+
+            <div class="row-fluid">
+              <div class="span9">
+                <p>Cloud attenuation becomes increasingly important to consider for reliable satellite communications at frequencies above 10 GHz [1]. For clouds or fog consist of small droplets, less than 0.01 cm, the Rayleigh approximation is valid for frequencies below 200 GHz and it is possible to express the attenuation in terms of the total water content per unit volume [3]. The following equation can be used to obtain the attenuation due to clouds for a given probability:</p>
+              </div><!--/Row-->
+            </div><!--/span-->
+            <div class="row-fluid">
+              <div class="span9">
+                <img src="./images/CloudAttenuationEq.png" style="padding-top:20px;padding-bottom:20px;"></img>
+              </div>
+            </div> 
+            <div class="row-fluid">
+              <div class="span9">
+                <p>where L is the total columnar content of liquid water (kg/m^2), Kl is the specific attenuation by water droplet (can be obtained in Fig. 2), and &theta; is the elevation angle.</p>
+              </div><!--/Row-->
+            </div><!--/span-->
+
+            <div class="row-fluid">
+              <div class="span9">
+                <img src="./images/CloudAttenuation.png" style="padding-top:20px;padding-bottom:20px;"></img>
+              </div>
+            </div> 
+
+            <hr>
+
+          <div class="row-fluid">
+            <div class="span9">
+              <a class="btn" href="#">Back To Top</a>
+            </div>
+          </div>
+
+        </div><!--/row-->
+
+
+        <hr>
+
+        <footer>
+          <p>© Geo Sat Tech 2012</p>
+        </footer>
+
+      </div><!--/.fluid-container-->
+
+      <!-- Le javascript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="testPlan.js"></script>
+  </body>
+</html>
